@@ -1,0 +1,145 @@
+header{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    height: 55px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    border-bottom:1px solid rgb(222, 242, 222) ;
+    z-index: 1;
+}
+.left-section{
+    display: flex;
+    align-items: center;
+}
+.left-section .hamburger-menu{
+    font-size: 20px;
+    margin: 0 20px;
+}
+.left-section .youtube-logo{
+    height: 20px;
+}
+.middle-section{
+    flex: 1;
+    margin: 0 35px 0 70px;
+    max-width: 700px;
+    display: flex;
+    align-items: center;
+}
+.middle-section .search-bar{
+    flex: 1;
+    height: 40px;
+    border: 1px solid gray;
+    padding-left: 8px;
+    box-shadow: inset 1px 2px 5px rgba(0, 0, 0, 0.05);
+    width: 0;
+}
+.middle-section .search-bar::placeholder{
+    font-family: 'Roboto' sans-serif;
+    font-size: 16px;
+    padding-left: 8px;
+}
+.middle-section .search-button{
+    height: 40px;
+    width: 60px;
+    background: rgb(240, 240, 240);
+    border: 1px solid rgb(192, 192, 192);
+    margin-left: -1px;
+    margin-right: 8px;
+}
+.search-bar,
+.voice-button, 
+.upload-icon-container, 
+.youtube-icon-container,
+.create-container,
+.notifications-icon-container
+{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.middle-section .search-button .tooltip,
+.voice-button .tooltip,
+.upload-icon-container .tooltip,
+.youtube-icon-container .tooltip,
+.notifications-icon-container .tooltip,
+.create-container .tooltip{
+    position: absolute;
+    background: gray;
+    color: #fff;
+    padding: 8px 12px;
+    border-radius: 2px;
+    font-size: 16px;
+    bottom: -24px;
+    opacity: 0;
+    transition: opacity 0.15s;
+    pointer-events: none;
+    white-space: nowrap;
+}
+.middle-section .search-button:hover .tooltip,
+.middle-section .voice-button:hover .tooltip,
+.upload-icon-container:hover .tooltip,
+.youtube-icon-container:hover .tooltip,
+.notifications-icon-container:hover .tooltip,
+.create-container:hover .tooltip{
+    opacity: 1;
+}
+.middle-section .voice-button{
+    background-color: rgb(245, 245, 245);
+    height: 40px;
+    width: 40px;
+    border-radius: 20px;
+    border: none;
+}
+
+.right-section{
+    width: 200px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-left: 8px;
+    flex-shrink: 0;
+}
+.right-section i{
+    font-size: 20px;
+    width: 20px;
+    height: 20px;
+}
+.right-section .upload{
+    height: 30px;
+    font-size: 20px;
+}
+.right-section .youtube-apps{
+    height: 30px;
+    font-size: 20px;
+}
+.right-section .notifications-icon-container,
+.create-container{
+    position: relative;
+}
+.right-section .notificatnios{
+    height: 30px;
+    font-size: 20px;
+}
+.right-section .notifications-count{
+    position: absolute;
+    font-family: Roboto, Arial;
+    right: -8px;
+    top: -8px;
+    font-size: 12px;
+    background: rgb(210, 2, 2);
+    border-radius: 50%;
+    padding: 2px 5px;
+    color: #fff;
+}
+.right-section .profile-user{
+    background-color: gray;
+    padding: 10px;
+    border-radius: 24px;
+    height: 30px;
+    width: 30px;
+}
